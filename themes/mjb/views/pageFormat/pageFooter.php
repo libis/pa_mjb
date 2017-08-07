@@ -28,11 +28,6 @@
 ?>
 		<div style="clear:both; height:1px;"><!-- empty --></div>
 		<div id="footer">
-			<ul class="list-inline pull-right social">
-				<li><i class="fa fa-twitter"></i></li>
-				<li><i class="fa fa-facebook-square"></i></li>
-				<li><i class="fa fa-youtube-play"></i></li>
-			</ul>
 			<ul class="list-inline">
 				<li><a href="http://www.mjb-jmb.org/" target="_blank">Notre site web</a></li>
 			</ul>
