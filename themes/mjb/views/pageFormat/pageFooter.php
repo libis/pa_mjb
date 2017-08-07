@@ -33,15 +33,10 @@
 				<li><i class="fa fa-facebook-square"></i></li>
 				<li><i class="fa fa-youtube-play"></i></li>
 			</ul>
-			<div>
-				Footer text here
-			</div>
 			<ul class="list-inline">
-				<li><a href="#">Link 1</a></li>
-				<li><a href="#">Link 2</a></li>
-				<li><a href="#">Link 3</a></li>
+				<li><a href="http://www.mjb-jmb.org/" target="_blank">Notre site web</a></li>
 			</ul>
-			<div><small>powered by <a href="http://www.collectiveaccess.org">CollectiveAccess 2015</a></small></div>
+			<div><small>Website by <a href="http://www.libis.be/" target="_blank">LIBIS</a>, powered by <a href="http://www.collectiveaccess.org" target="_blank">CollectiveAccess</a></small></div>
 		</div><!-- end footer -->
 <?php
 	//
