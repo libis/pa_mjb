@@ -74,20 +74,29 @@
 				<H4>{{{<unit relativeTo="ca_collections" delimiter="<br/>"><l>^ca_collections.preferred_labels.name</l></unit><ifcount min="1" code="ca_collections"> ➔ </ifcount>}}}{{{ca_objects.preferred_labels.name}}}</H4>
 				<H6>{{{<unit>^ca_objects.type_id</unit>}}}</H6>
 				<HR>
-				
-				{{{<ifdef code="ca_objects.measurementSet.measurements">^ca_objects.measurementSet.measurements (^ca_objects.measurementSet.measurementsType)</ifdef><ifdef code="ca_objects.measurementSet.measurements,ca_objects.measurementSet.measurements"> x </ifdef><ifdef code="ca_objects.measurementSet.measurements2">^ca_objects.measurementSet.measurements2 (^ca_objects.measurementSet.measurementsType2)</ifdef>}}}
-				
-				
+
 				{{{<ifdef code="ca_objects.idno"><H6>Identifer:</H6>^ca_objects.idno<br/></ifdef>}}}
-				{{{<ifdef code="ca_objects.containerID"><H6>Box/series:</H6>^ca_objects.containerID<br/></ifdef>}}}				
-				
-				{{{<ifdef code="ca_objects.description">
-					<span class="trimText">^ca_objects.description</span>
-				</ifdef>}}}
-				
-				
-				{{{<ifdef code="ca_objects.dateSet.setDisplayValue"><H6>Date:</H6>^ca_objects.dateSet.setDisplayValue<br/></ifdev>}}}
-				
+
+                {{{<ifcount code="ca_objects.denominationControleeMusee" min="1"><H6>Dénomination contrôlée</H6></ifcount>}}}
+                {{{<unit relativeTo="ca_objects.denominationControleeMusee" delimiter="<br/>">^ca_objects.denominationControleeMusee</unit>}}}
+
+                {{{<ifdef code="ca_objects.designationObjet" min="1"><H6>Désignation de l'objet</H6></ifdef>}}}
+                {{{<unit relativeTo="ca_objects.designationObjet" delimiter="<br/>">^ca_objects.designationObjet</unit>}}}
+
+                {{{<ifdef code="ca_objects.auteur" min="1"><H6>Auteur</H6></ifdef>}}}
+                {{{<unit relativeTo="ca_objects" delimiter="<br/>">
+                    <b>^ca_objects.auteur.auteurNom</b> <ifdef code="ca_objects.auteur.fonction">(^ca_objects.auteur.fonction)</ifdef>
+                </unit>}}}
+
+                {{{<ifdef code="ca_objects.date" min="1"><H6>Date de production</H6></ifdef>}}}
+                {{{<unit relativeTo="ca_objects" delimiter="<br/>">
+                     <ifdef code="ca_objects.date.dateDebut">^ca_objects.date.dateDebut</ifdef>
+                     <ifdef code="ca_objects.date.datefin">- ^ca_objects.date.datefin</ifdef>
+                </unit>}}}
+
+                {{{<ifdef code="ca_objects.provenanceGeographique" min="1"><H6>Provenance géographique</H6></ifdef>}}}
+                {{{<unit relativeTo="ca_objects.provenanceGeographique" delimiter="<br/>">^ca_objects.provenanceGeographique</unit>}}}
+
 				<hr></hr>
 					<div class="row">
 						<div class="col-sm-6">		
