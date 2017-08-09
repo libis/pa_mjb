@@ -279,7 +279,8 @@ h1 i {
 	color:#cccccc;
 }
 .navbar-brand img {
-  	width:100%;
+	width:300px;
+	height: 60px;
 }
 .navbar-brand {
 	width:200px;
