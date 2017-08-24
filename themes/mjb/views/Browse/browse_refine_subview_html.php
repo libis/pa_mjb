@@ -63,6 +63,13 @@
 						$vn_facet_size = sizeof($va_facet_info['content']);
 						$vn_c = 0;
 						foreach($va_facet_info['content'] as $va_item) {
+							
+						    //libis_start
+                            /* Browse only 'Objets de musée', exclude others.*/
+						    if($va_facet_info['label_singular'] === "object type" & $va_item['id'] != 23)
+						        continue;
+                            //libis_end
+							
 							print "<div>".caNavLink($this->request, $va_item['label'], '', '*', '*','*', array('key' => $vs_key, 'facet' => $vs_facet_name, 'id' => $va_item['id'], 'view' => $vs_view))."</div>";
 							$vn_c++;
 						
