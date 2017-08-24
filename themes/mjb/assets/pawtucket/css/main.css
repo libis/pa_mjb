@@ -223,6 +223,10 @@ h1 i {
     box-shadow: 0 2px 3px rgba(0, 0, 0, 0.176);
 }
 
+.dropdown-menu > li > a:hover{
+	color: #8B2112;
+}
+
 .nav > li > a{
 	padding-top: 5px;
 	padding-bottom: 5px;
