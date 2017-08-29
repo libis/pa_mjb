@@ -18,10 +18,6 @@
 			Title:<br/>
 			{{{ca_objects.preferred_labels.name%width=220px}}}
 		</div>
-		<div class="advancedSearchField">
-			Type:<br/>
-			{{{ca_objects.type_id}}}
-		</div>
 	</div>	
 	
 	<br style="clear: both;"/>
