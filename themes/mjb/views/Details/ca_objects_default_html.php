@@ -98,28 +98,6 @@
                 {{{<unit relativeTo="ca_objects.provenanceGeographique" delimiter="<br/>">^ca_objects.provenanceGeographique</unit>}}}
 
 				<hr></hr>
-					<div class="row">
-						<div class="col-sm-6">		
-							{{{<ifcount code="ca_entities" min="1" max="1"><H6>Related person</H6></ifcount>}}}
-							{{{<ifcount code="ca_entities" min="2"><H6>Related people</H6></ifcount>}}}
-							{{{<unit relativeTo="ca_entities" delimiter="<br/>"><l>^ca_entities.preferred_labels.displayname</l></unit>}}}
-							
-							
-							{{{<ifcount code="ca_places" min="1" max="1"><H6>Related place</H6></ifcount>}}}
-							{{{<ifcount code="ca_places" min="2"><H6>Related places</H6></ifcount>}}}
-							{{{<unit relativeTo="ca_places" delimiter="<br/>"><l>^ca_places.preferred_labels.name</l></unit>}}}
-							
-							{{{<ifcount code="ca_list_items" min="1" max="1"><H6>Related Term</H6></ifcount>}}}
-							{{{<ifcount code="ca_list_items" min="2"><H6>Related Terms</H6></ifcount>}}}
-							{{{<unit relativeTo="ca_list_items" delimiter="<br/>">^ca_list_items.preferred_labels.name_plural</unit>}}}
-							
-							{{{<ifcount code="ca_objects.LcshNames" min="1"><H6>LC Terms</H6></ifcount>}}}
-							{{{<unit delimiter="<br/>"><l>^ca_objects.LcshNames</l></unit>}}}
-						</div><!-- end col -->				
-						<div class="col-sm-6 colBorderLeft">
-							{{{map}}}
-						</div>
-					</div><!-- end row -->
 			</div><!-- end col -->
 		</div><!-- end row --></div><!-- end container -->
 	</div><!-- end col -->
