@@ -23,8 +23,6 @@
         <p><b>Contact</b>: Zahava Seewald, curator <i>z.seewald@mjb-jmb.org</i></p>
 	</div>
 	<div class="col-sm-3 col-sm-offset-1">
-		<h6>&nbsp;</h6><address>Musée Juif de Belgique<br>			rue des Minimes 21<br>			1000 Bruxelles</address>
-
-		<address><span class="info">Téléphone</span> — 02 512 19 63<br>			<span class="info">Email</span> — <a href="#">info@mjb-jmb.org</a></address>
+		<address>Jewish Museum of Belgium<br>Musée Juif de Belgique<br>Joods Museum van België<br><br>rue des Minimes 21<br>1000 Brussels<br>Belgium </address>
 	</div>
 </div>
