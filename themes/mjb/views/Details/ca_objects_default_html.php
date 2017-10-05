@@ -94,6 +94,9 @@
                      <ifdef code="ca_objects.date.datefin">- ^ca_objects.date.datefin</ifdef>
                 </unit>}}}
 
+                {{{<ifdef code="ca_objects.datationPeriode" min="1"><H6>Datation période</H6></ifdef>}}}
+                {{{<unit relativeTo="ca_objects.datationPeriode" delimiter="<br/>">^ca_objects.datationPeriode</unit>}}}				
+				
                 {{{<ifdef code="ca_objects.provenanceGeographique" min="1"><H6>Provenance géographique</H6></ifdef>}}}
                 {{{<unit relativeTo="ca_objects.provenanceGeographique" delimiter="<br/>">^ca_objects.provenanceGeographique</unit>}}}
 
