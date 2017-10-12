@@ -43,6 +43,12 @@
 		print "<H3>"._t("Filter by")."</H3>";
 		foreach($va_facets as $vs_facet_name => $va_facet_info) {
 			
+			//libis_start
+		    // hide object type filtering
+			if($va_facet_info['label_singular'] === "object type")
+			    continue;
+            //libis_end
+			
 			if ((caGetOption('deferred_load', $va_facet_info, false) || ($va_facet_info["group_mode"] == 'hierarchical')) && ($o_browse->getFacet($vs_facet_name))) {
 				print "<H5>".$va_facet_info['label_singular']."</H5>"; 
 ?>
