@@ -75,7 +75,7 @@
 				<H6>{{{<unit>^ca_objects.type_id</unit>}}}</H6>
 				<HR>
 
-				{{{<ifdef code="ca_objects.idno"><H6>Identifer:</H6>^ca_objects.idno<br/></ifdef>}}}
+				{{{<ifdef code="ca_objects.idno"><H6>N° Inventaire:</H6>^ca_objects.idno<br/></ifdef>}}}
 
                 {{{<ifcount code="ca_objects.denominationControleeMusee" min="1"><H6>Dénomination contrôlée</H6></ifcount>}}}
                 {{{<unit relativeTo="ca_objects.denominationControleeMusee" delimiter="<br/>">^ca_objects.denominationControleeMusee</unit>}}}
