@@ -15,9 +15,12 @@
         <p>
             The museum is trying to improve the information that accompanies each item. We invite the public and researchers to help us correct and complete the information. All suggestions should be sent to the email address below.
         </p>
-        <h6><b>Reproduction</b></h6>
+        <h6><b>Disclaimer copyrights</b></h6>
         <p>
-            As the reproduction of an image requires acknowledgement of its copyright, we invite you to contact the museum.
+            Unless otherwise labelled, all the images used come from the collections of the Jewish Museum of Belgium (Brussels). The Jewish Museum of Belgium has tried to locate and inform the copyright holders. If you nevertheless believe that a copyright statement is incorrect or incomplete, please feel free to <a href="mailto:photo@fine-arts-museum.be">contact us</a>.
+            <br>If image material is reproduced, rights to which are held by the Museum (reproduction right), written permission must be requested from the Museum and the costs of use paid.
+            <br>Reproductions of works of art belonging to collections of the Jewish Museum of Belgium, should carry the following Copyright:<br>© Jewish Museum of Belgium, Brussels / photographer’s name.
+            <br>Where the artist is alive or has been dead less than seventy years ago, the artist, his heirs or his legal representatives may assert rights to the reproduction of the artwork (copyright). To settle any attendant fee, the applicant must himself contact the relevant party or management companies such as SABAM or SOFAM.
         </p>
         <br>
         <p><b>Contact</b>: Zahava Seewald, curator <i>z.seewald@mjb-jmb.org</i></p>
