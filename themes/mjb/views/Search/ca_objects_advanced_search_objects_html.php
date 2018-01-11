@@ -15,7 +15,7 @@
 			{{{_fulltext%width=220px&height=25px}}}
 			</div>
 			<div class="advancedSearchField">
-				Title:<br/>
+				Titre:<br/>
 				{{{ca_objects.preferred_labels.name%width=220px}}}
 			</div>
 			<div class="advancedSearchField">
