@@ -100,6 +100,22 @@
                 {{{<ifdef code="ca_objects.provenanceGeographique" min="1"><H6>Provenance géographique</H6></ifdef>}}}
                 {{{<unit relativeTo="ca_objects.provenanceGeographique" delimiter="<br/>">^ca_objects.provenanceGeographique</unit>}}}
 
+                {{{<ifdef code="ca_objects.dimensions" min="1"><H6>Dimensions</H6></ifdef>}}}
+                {{{<unit relativeTo="ca_objects" delimiter="<br/>">
+                     <ifdef code="ca_objects.dimensions.dimensions_hauteur">Hauteur:^ca_objects.dimensions.dimensions_hauteur;</ifdef>
+                     <ifdef code="ca_objects.dimensions.dimensions_largeur"> Largeur:^ca_objects.dimensions.dimensions_largeur;</ifdef>
+                     <ifdef code="ca_objects.dimensions.dimensions_epaisseur"> Epaisseur:^ca_objects.dimensions.dimensions_epaisseur;</ifdef>
+                     <ifdef code="ca_objects.dimensions.dimensions_diametre"> Diametre:^ca_objects.dimensions.dimensions_diametre</ifdef>
+                     <ifdef code="ca_objects.dimensions.dimensionsPartie">(^ca_objects.dimensions.dimensionsPartie)</ifdef>
+                     <ifdef code="ca_objects.dimensions.dimensionRemarque">(^ca_objects.dimensions.dimensionRemarque)</ifdef>
+                </unit>}}}
+
+                {{{<ifdef code="ca_objects.materiaux" min="1"><H6>Matériaux</H6></ifdef>}}}
+                {{{<unit relativeTo="ca_objects.materiaux" delimiter="; ">^ca_objects.materiaux</unit>}}}
+
+                {{{<ifdef code="ca_objects.techniques" min="1"><H6>Techniques</H6></ifdef>}}}
+                {{{<unit relativeTo="ca_objects.techniques" delimiter="; ">^ca_objects.techniques</unit>}}}				
+				
 				<hr></hr>
 			</div><!-- end col -->
 		</div><!-- end row --></div><!-- end container -->
