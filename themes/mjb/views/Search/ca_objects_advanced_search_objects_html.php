@@ -48,6 +48,14 @@
                 Dénomination Contrôlée:<br/>
                 {{{ca_objects.denominationControleeMusee%width=220px&height=28px}}}
             </div>
+            <div class="advancedSearchField">
+                Evéments en rappor:<br/>
+                {{{ca_objects.evenementsRapport%width=220px&height=28px}}}
+            </div>
+            <div class="advancedSearchField">
+                Organisation en rapport:<br/>
+                {{{ca_objects.organisationRapport%width=220px&height=28px}}}
+            </div>
         </div>
     </div>
 	<br style="clear: both;"/>
