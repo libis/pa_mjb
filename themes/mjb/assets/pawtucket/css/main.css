@@ -197,6 +197,7 @@ h1 i {
   border-radius:0px;
   background-image:none;
 	background: #FFFFFF;
+	
   border-top:0px;
   border:0px;
   -webkit-box-shadow:0 1px 3px rgba(0, 0, 0, 0.3);
@@ -299,7 +300,7 @@ h1 i {
 	color:#cccccc;
 }
 .navbar-brand img {
-	width:300px;
+	width:auto;
 	height: 60px;
 }
 .navbar-brand {
@@ -1532,6 +1533,7 @@ a.browseRemoveFacet img {
 	padding-bottom:150px;
 	color:#ABABAB;
 	border:1px solid #f5f5f5;
+        background-color: #f2f3f4;
 }
 .detail .detailMediaToolbar, .gallery .detailMediaToolbar{
 	background-color:#f5f5f5;
