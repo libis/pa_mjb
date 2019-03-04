@@ -25,7 +25,7 @@
  *
  * ----------------------------------------------------------------------
  */
- 
+
 	$qr_res 			= $this->getVar('result');				// browse results (subclass of SearchResult)
 	$va_facets 			= $this->getVar('facets');				// array of available browse facets
 	$va_criteria 		= $this->getVar('criteria');			// array of browse criteria
@@ -48,6 +48,9 @@
 	$vs_extended_info_template = caGetOption('extendedInformationTemplate', $va_options, null);
 
 	$vb_ajax			= (bool)$this->request->isAjax();
+
+	// get the browse type, based on which information will be shown on result page
+    $va_browse_info = $this->getVar("browseInfo");
 
 	$o_icons_conf = caGetIconsConfig();
 	$va_object_type_specific_icons = $o_icons_conf->getAssoc("placeholders");
@@ -89,7 +92,30 @@
 			while($qr_res->nextHit() && ($vn_c < $vn_hits_per_block)) {
 				$vn_id 					= $qr_res->get("{$vs_table}.{$vs_pk}");
 				$vs_idno_detail_link 	= caDetailLink($this->request, $qr_res->get("{$vs_table}.idno"), '', $vs_table, $vn_id);
-				$vs_label_detail_link 	= caDetailLink($this->request, $qr_res->get("{$vs_table}.denominationControleeMusee", array("convertCodesToDisplayText" => true)), '', $vs_table, $vn_id);
+                $vs_label_detail_link = caDetailLink($this->request, $qr_res->get("{$vs_table}.preferred_labels.name"), '', $vs_table, $vn_id);
+
+
+                if(!empty($va_browse_info["labelSingular"])){
+                    if($va_browse_info["labelSingular"] === "Museum Collection")
+                        $vs_label_detail_link 	= caDetailLink($this->request, $qr_res->get("{$vs_table}.denominationControleeMusee", array("convertCodesToDisplayText" => true)), '', $vs_table, $vn_id);
+
+                    if($va_browse_info["labelSingular"] === "Library Collection")
+                    {
+                        $vs_bib_code_template = "<unit relativeTo=\"ca_objects\" delimiter='<br>'>
+                        ^ca_objects.codeBiblio.sujet 
+                        <ifdef code=\"ca_objects.codeBiblio.nom1\">, ^ca_objects.codeBiblio.nom1</ifdef> 
+                        <ifdef code=\"ca_objects.codeBiblio.titre1\">, ^ca_objects.codeBiblio.titre1</ifdef> 
+                        </unit>";
+                        $vs_bib_code 	= $qr_res->getWithTemplate($vs_bib_code_template);
+                        $vs_bib_title 	= caDetailLink($this->request, $qr_res->get("{$vs_table}.preferred_labels.name"), '', $vs_table, $vn_id);
+                        $vs_label_detail_link 	= $vs_bib_title ."<br>".$vs_bib_code;
+                    }
+
+                    if($va_browse_info["labelSingular"] === "Photography Collection")
+                        $vs_label_detail_link 	= $qr_res->getWithTemplate("<unit delimiter='<br>'>^ca_objects.descriptionContenu</unit>");
+                }
+
+				//$vs_label_detail_link 	= caDetailLink($this->request, $qr_res->get("{$vs_table}.denominationControleeMusee", array("convertCodesToDisplayText" => true)), '', $vs_table, $vn_id);
 				$vs_thumbnail = "";
 				$vs_type_placeholder = "";
 				$vs_typecode = "";
@@ -108,7 +134,7 @@
 						$vs_image = $vs_default_placeholder_tag;
 					}
 				}
-				$vs_rep_detail_link 	= caDetailLink($this->request, $vs_image, '', $vs_table, $vn_id);	
+				$vs_rep_detail_link 	= caDetailLink($this->request, $vs_image, '', $vs_table, $vn_id);
 				
 				$vs_add_to_set_link = "";
 				if(is_array($va_add_to_set_link_info) && sizeof($va_add_to_set_link_info)){
