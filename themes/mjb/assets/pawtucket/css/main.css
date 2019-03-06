@@ -264,6 +264,8 @@ h1 i {
   background-color: transparent;;
   background-image: none;
   filter: none;
+  background: #802112;
+  color: white;
 }
 .navbar-default .navbar-nav > li > a {
   color: #000000;
@@ -1532,7 +1534,7 @@ a.browseRemoveFacet img {
 	padding-bottom:150px;
 	color:#ABABAB;
 	border:1px solid #f5f5f5;
-        background-color: #f2f3f4;
+	background-color: #f2f3f4;
 }
 .detail .detailMediaToolbar, .gallery .detailMediaToolbar{
 	background-color:#f5f5f5;
