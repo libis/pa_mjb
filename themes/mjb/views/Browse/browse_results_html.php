@@ -151,6 +151,20 @@ if (!$vb_ajax) {	// !ajax
 			$i = 0;
 			foreach($va_criteria as $va_criterion) {
 				print "<strong>".$va_criterion['facet'].':</strong>';
+				//libis_start
+                //show only fields with search term
+                if($vb_is_search){
+                    $keywords_array = explode (';', $va_criterion['value']);
+                    $keywords_to_show = array();
+                    foreach ($keywords_array as $key => $value){
+                        $temp_array = explode (':', $value);
+                        if(is_array($temp_array) && sizeof($temp_array) === 2 && !ctype_space(end($temp_array)))
+                            $keywords_to_show[] = implode(':', $temp_array);
+                    }
+                    $va_criterion['value'] = implode(';', $keywords_to_show);
+                }
+                //libis_end
+
 				if ($va_criterion['facet_name'] != '_search') {
 					print caNavLink($this->request, '<button type="button" class="btn btn-default btn-sm">'.$va_criterion['value'].' <span class="glyphicon glyphicon-remove-circle"></span></button>', 'browseRemoveFacet', '*', '*', '*', array('removeCriterion' => $va_criterion['facet_name'], 'removeID' => $va_criterion['id'], 'view' => $vs_current_view, 'key' => $vs_browse_key));
 				}else{
