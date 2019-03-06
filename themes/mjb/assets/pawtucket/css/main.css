@@ -698,8 +698,7 @@ a.browseRemoveFacet img {
   left: auto;
 }
 .yamm .nav.navbar-right .dropdown-menu {
-  left: -50%;
-  right: 50%;
+  right: -100%;
 }
 .yamm .yamm-content {
   padding: 20px 30px;
