@@ -8,7 +8,20 @@
 ?>
 
 {{{form}}}
-	<div class="row">	
+    <div class="row">
+        <div class='advancedContainer'>
+            <div class="advancedSearchField">
+                Free Text Search:<br/>
+                {{{_fulltext%restrictToTypes=Bibliothèque&width=220px&height=25px}}}
+            </div>
+            <div class="advancedSearchField">
+                N° d’ Inventaire:<br/>
+                {{{ca_objects.idno%restrictToTypes=Bibliothèque&width=220px}}}
+            </div>
+        </div>
+    </div>
+    <br>
+	<div class="row">
         <div class='advancedContainer'>
             <div class="advancedSearchField">
                 Auteur:<br/>
@@ -16,11 +29,11 @@
             </div>
          <div class="advancedSearchField">
                 Titre:<br/>
-                {{{ca_objects.preferred_labels.name%width=220px}}}
+                {{{ca_objects.preferred_labels.name%restrictToTypes=Bibliothèque&width=220px}}}
          </div>
         </div>
 	</div>
-<br>
+    <br>
     <div class="row">
         <div class='advancedContainer'>
             <div class="advancedSearchField">
@@ -34,6 +47,14 @@
         </div>
     </div>
     <br>
+    <div class="row">
+        <div class='advancedContainer'>
+            <div class="advancedSearchField">
+                Code:<br/>
+                {{{ca_objects.codeBiblio.sujet%restrictToTypes=Bibliothèque&width=220px&height=25px}}}
+            </div>
+        </div>
+    </div>
 
 	<br style="clear: both;"/>
 	
