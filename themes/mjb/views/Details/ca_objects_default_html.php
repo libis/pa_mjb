@@ -194,6 +194,8 @@
                             <ifdef code="ca_objects.dimensions.dimensionsPartie">(^ca_objects.dimensions.dimensionsPartie)</ifdef>
                             <ifdef code="ca_objects.dimensions.dimensionRemarque">(^ca_objects.dimensions.dimensionRemarque)</ifdef>
                         </unit>}}}
+                        {{{<ifcount code="ca_objects.nomEditeur" min="1"><H6>Nom éditeur</H6></ifcount>}}}
+                        {{{<unit relativeTo="ca_objects.nomEditeur" delimiter="<br/>">^ca_objects.nomEditeur</unit>}}}						
                     </div><!-- end col -->
                 <?php } ?>
 		</div><!-- end row --></div><!-- end container -->
