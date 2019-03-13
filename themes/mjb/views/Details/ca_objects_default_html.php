@@ -79,7 +79,6 @@
 				<HR>
 
 				{{{<ifdef code="ca_objects.idno"><H6>N° Inventaire:</H6>^ca_objects.idno<br/></ifdef>}}}
-
                 {{{<ifcount code="ca_objects.denominationControleeMusee" min="1"><H6>Dénomination contrôlée</H6></ifcount>}}}
                 {{{<unit relativeTo="ca_objects.denominationControleeMusee" delimiter="<br/>">^ca_objects.denominationControleeMusee</unit>}}}
 
@@ -158,7 +157,7 @@
                         <ifdef code="ca_objects.dimensions.dimensionRemarque">(^ca_objects.dimensions.dimensionRemarque)</ifdef>
                     </unit>}}}
                     {{{<ifcount code="ca_objects.nomEditeur" min="1"><H6>Nom éditeur</H6></ifcount>}}}
-                    {{{<unit relativeTo="ca_objects.nomEditeur" delimiter="<br/>">^ca_objects.nomEditeur</unit>}}}					
+                    {{{<unit relativeTo="ca_objects.nomEditeur" delimiter="<br/>">^ca_objects.nomEditeur</unit>}}}
                 </div><!-- end col -->
                 <?php } ?>
                 <?php if($obj_type === "photo") { ?>
@@ -195,7 +194,7 @@
                             <ifdef code="ca_objects.dimensions.dimensions_diametre"> Diametre:^ca_objects.dimensions.dimensions_diametre</ifdef>
                             <ifdef code="ca_objects.dimensions.dimensionsPartie">(^ca_objects.dimensions.dimensionsPartie)</ifdef>
                             <ifdef code="ca_objects.dimensions.dimensionRemarque">(^ca_objects.dimensions.dimensionRemarque)</ifdef>
-                        </unit>}}}					
+                        </unit>}}}
                     </div><!-- end col -->
                 <?php } ?>
 		</div><!-- end row --></div><!-- end container -->
