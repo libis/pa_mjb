@@ -78,7 +78,11 @@
  			#
  			if(sizeof($va_featured_ids) == 0){
  				$t_object = new ca_objects();
- 				$va_featured_ids = array_keys($t_object->getRandomItems(10, array('checkAccess' => $va_access_values, 'hasRepresentations' => 1)));
+
+ 				//$va_featured_ids = array_keys($t_object->getRandomItems(10, array('checkAccess' => $va_access_values, 'hasRepresentations' => 1)));
+		                $record_types_to_show = explode(',', str_replace(' ', '', $this->config->get("front_page_record_type")));
+				$va_featured_ids = array_keys($t_object->getRecentlyAddedItems(10, array('checkAccess' => $va_access_values, 'hasRepresentations' => 1, 'restrictToTypes' => $record_types_to_show)));
+
  				$this->view->setVar('featured_set_item_ids', $va_featured_ids);
 				$this->view->setVar('featured_set_items_as_search_result', caMakeSearchResult('ca_objects', $va_featured_ids));
  			}
