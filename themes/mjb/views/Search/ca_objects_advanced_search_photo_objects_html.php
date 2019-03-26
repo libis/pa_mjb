@@ -1,7 +1,7 @@
 <div class="container">
 	<div class="row">
 		<div class="col-sm-8 ">
-			<h1>Photo Collection Search</h1>
+			<h1>Photography Collection Search</h1>
 
 <?php
 	print "<p>Enter your search terms in the fields below.</p>";
