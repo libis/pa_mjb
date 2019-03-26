@@ -15,7 +15,7 @@
                 {{{_fulltext%restrictToTypes=Bibliothèque&width=220px&height=25px}}}
             </div>
             <div class="advancedSearchField">
-                N° d’ Inventaire:<br/>
+                N° INVENTAIRE:<br/>
                 {{{ca_objects.idno%restrictToTypes=Bibliothèque&width=220px}}}
             </div>
         </div>
@@ -37,7 +37,7 @@
     <div class="row">
         <div class='advancedContainer'>
             <div class="advancedSearchField">
-                Année d’Edition:<br/>
+                Date d’Edition:<br/>
                 {{{ca_objects.dateEdition%restrictToTypes=Bibliothèque&width=220px&height=25px}}}
             </div>
             <div class="advancedSearchField">
